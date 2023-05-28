@@ -30,3 +30,11 @@
     - pending - пошел запрос
     - resolved - успешный запрос
     - rejected - запрос с ошибкой
+
+---
+
+npm i react-toastify
+
+npm i react-icons
+
+npm i modern-normalize
