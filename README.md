@@ -1,4 +1,4 @@
-# POKEMON API
+# POKEMON API ---> link https://pokeapi.co/
 
 - Основы HTTP-запросов в React
 - «Архитектура» компонентов и состояний
