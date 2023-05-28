@@ -38,18 +38,25 @@ export default class PokemonInfo extends Component {
     const { pokemon, error, status } = this.state;
     const { pokemonName } = this.props;
 
+    // Если статус равен 'idle', возвращается сообщение о вводе имени покемона.
     if (status === 'idle') {
       return <div>Введите имя покемона.</div>;
     }
 
+    // Если статус равен 'pending', возвращается компонент PokemonPendingView,
+    // который отображает загрузку данных о покемоне.
     if (status === 'pending') {
       return <PokemonPendingView pokemonName={pokemonName} />;
     }
 
+    // Если статус равен 'rejected', возвращается компонент PokemonErrorView,
+    // который отображает сообщение об ошибке.
     if (status === 'rejected') {
       return <PokemonErrorView message={error.message} />;
     }
 
+    // Если статус равен 'resolved', возвращается компонент PokemonDataView,
+    // который отображает информацию о покемоне.
     if (status === 'resolved') {
       return <PokemonDataView pokemon={pokemon} />;
     }

@@ -12,6 +12,7 @@ const styles = {
 };
 
 export default function PokemonPendingView({ pokemonName }) {
+  // Создается временный объект покемона с именем и изображением заглушки для отображения во время загрузки
   const pokemon = {
     name: pokemonName,
     sprites: {
@@ -26,10 +27,13 @@ export default function PokemonPendingView({ pokemonName }) {
 
   return (
     <div role="alert">
+      {/* Отображение спиннера загрузки */}
       <div style={styles.spinner}>
         <ImSpinner size="32" className="icon-spin" />
         Загружаем...
       </div>
+
+      {/* Отображение компонента PokemonDataView для временного покемона */}
       <PokemonDataView pokemon={pokemon} />
     </div>
   );
